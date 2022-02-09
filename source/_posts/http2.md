@@ -1,7 +1,7 @@
 ---
 title: HTTP2
 date: 2022-02-08 22:19:20
-tags:
+tags: Network
 ---
 
 维基百科关于 HTTP/2 的介绍，可以看下定义和发展历史:

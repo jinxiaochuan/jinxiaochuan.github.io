@@ -1,7 +1,7 @@
 ---
 title: CDN
 date: 2022-02-08 19:56:46
-tags:
+tags: Network
 ---
 
 #### 什么是 CDN？
@@ -55,16 +55,16 @@ CName 记录是 Canonical Name 的简称，通常称别名指向，CNAME 记录�
 
 ###### CNAME 记录如何使用？
 
-例如，假设您有几个子域，例如http://www.mydomain.com，http://ftp.mydomain.com，http://mail.mydomain.com等，并且您希望这些子域指向您的主域名http://mydomain.com。您可以创建CNAME记录，而不是为每个子域创建A记录并将其绑定到您域的IP地址。
+例如，假设您有几个子域，例如<http://www.mydomain.com，http://ftp.mydomain.com，http://mail.mydomain.com等，并且您希望这些子域指向您的主域名http://mydomain.com。您可以创建CNAME记录，而不是为每个子域创建A记录并将其绑定到您域的IP>地址。
 如下表所示，如果服务器的 IP 地址发生更改，则只需更新一个 A 记录，并且所有子域都会自动更新，因为所有 CNAMES 都指向带有 A 记录的主域：
 ![cname](https://pic1.zhimg.com/v2-aab77a543b11a4a3ecf40ec226f1af4e_r.jpg?source=1940ef5c)
-http://mydomain.com指向服务器IP地址，并通过http://www.mydomain.com指向相同的地址http://mydomain.com。如果IP地址发生更改，则只需要在一个地方进行更新即可：只需为修改A记录http://mydomain.com，那么http://www.mydomain.com自动继承更改。
+<http://mydomain.com指向服务器IP地址，并通过http://www.mydomain.com指向相同的地址http://mydomain.com。如果IP地址发生更改，则只需要在一个地方进行更新即可：只需为修改A记录http://mydomain.com，那么http://www.mydomain.com>自动继承更改。
 　　 CNAME 记录必须始终指向另一个域名，永远不要直接指向 IP 地址。如果您尝试将 CNAME 记录指向 IP 地址，DNSimple 的记录编辑器会警告您。CNAME 对其他记录必须是唯一的。CNAME 记录局限性
 　　 CNAME 记录必须始终指向另一个域名，并且永远不要直接指向 IP 地址。
-　　您不能为主域名（http://mydomain.com）本身创建CNAME记录，该记录必须是A记录。
-　　例如，您不能将http://mydomain.com映射到http://google.com，但是可以将http://google.mydomain.com映射到http://google.com。
+　　您不能为主域名（<http://mydomain.com）本身创建CNAME记录，该记录必须是A>记录。
+　　例如，您不能将<http://mydomain.com映射到http://google.com，但是可以将http://google.mydomain.com映射到http://google.com>。
 　　使用 CNAME 记录意味着有一个额外的请求发送到 DNS 服务器，这可能会导致几毫秒的延迟。
-　　一个 CNAME 记录不能与另一个具有相同名称的记录共存。不能同时有 CNAME 和 TXT 记录http://www.example.com。
+　　一个 CNAME 记录不能与另一个具有相同名称的记录共存。不能同时有 CNAME 和 TXT 记录<http://www.example.com>。
 　　一个 CNAME 可以指向另一个 CNAME，尽管出于性能原因通常不建议使用此配置。如果适用，CNAME 应该尽可能地指向目标名称，以避免不必要的性能开销。
 
 #### 如何解决 CDN 缓存
